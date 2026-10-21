@@ -1,0 +1,303 @@
+@import "tailwindcss";
+
+/* ---------- tema claro ---------- */
+:root {
+  /* Claro siempre: los controles nativos y las barras de scroll siguen al
+     color-scheme, no al fondo que pintemos nosotros. */
+  color-scheme: light;
+
+  --bg: #f6f6f7;
+  --surface: #ffffff;
+  --surface-muted: #f0f0f2;
+  --border: #e3e3e7;
+  --border-strong: #d1d1d8;
+  --text: #17171c;
+  --text-muted: #6b6b76;
+  /* Texto auxiliar: conserva la jerarquia sin caer por debajo de 4.5:1 sobre
+     las superficies claras donde se usa a 11–12 px. */
+  --text-faint: #6f6f7b;
+  --accent: #5b53d4;
+  --accent-soft: #ecebfb;
+  --accent-text: #ffffff;
+  --warn: #b45309;
+  --warn-soft: #fdf1e0;
+  --danger: #be2f36;
+  --danger-soft: #fdeced;
+  --ok: #12795e;
+  --ok-soft: #e5f5ef;
+
+  /* Segundo color del lavado de fondo. Es una variable y no var(--ok) escrito
+     dentro del gradiente para que un tema pueda corregir esa mancha en una
+     linea, en vez de duplicar los cinco gradientes enteros. */
+  --wash-alt: var(--ok);
+}
+
+/* ---------- tema oscuro ----------
+   Ya no se activa con la preferencia del sistema: el hub es claro siempre.
+   Se conserva entero y colgado de data-theme por si algun dia hay un
+   interruptor, pero hoy no lo enciende nadie. */
+:root[data-theme="dark"] {
+  --bg: #0b0b0e;
+  --surface: #141419;
+  --surface-muted: #1c1c23;
+  --border: #26262e;
+  --border-strong: #34343f;
+  --text: #ececf1;
+  --text-muted: #9d9daa;
+  --text-faint: #6d6d7a;
+  --accent: #8b83f5;
+  --accent-soft: #1e1b3d;
+  --accent-text: #0b0b0e;
+  --warn: #e8a13c;
+  --warn-soft: #2c2113;
+  --danger: #f2666d;
+  --danger-soft: #2e1618;
+  --ok: #46c39b;
+  --ok-soft: #10261f;
+}
+
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-faint: var(--text-faint);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-text: var(--accent-text);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Lavado ambiental. Muy tenue y quieto: el cristal solo se lee como cristal si
+   hay algo debajo que desviar. Sobre un fondo plano una lamina translucida es
+   solo una caja mas clara. Va en ::before fijo para no repintarse al hacer
+   scroll ni entrar en el flujo del documento. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(70% 55% at 12% 0%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 62%),
+    radial-gradient(60% 50% at 92% 8%, color-mix(in srgb, var(--wash-alt) 8%, transparent), transparent 60%),
+    radial-gradient(80% 60% at 50% 108%, color-mix(in srgb, var(--accent) 8%, transparent), transparent 62%);
+}
+
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  body::before {
+    display: none;
+  }
+}
+
+/* Tipografia tabular para las horas, para que las columnas no bailen. */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================================
+   MATERIALES
+   Superficies translucidas que dejan pasar lo que hay debajo.
+   La jerarquia la marca el grosor del material, no el color:
+   cuanto mas grande la superficie, mas desenfoque y mas sombra.
+   ============================================================ */
+
+:root {
+  /* Tinte del cristal. En claro es blanco lavado; en oscuro NO es negro
+     translucido sino gris claro muy tenue, o el cristal se lee como un
+     agujero en vez de como una lamina. */
+  --glass: rgba(255, 255, 255, 0.62);
+  --glass-thick: rgba(255, 255, 255, 0.74);
+  --glass-edge: rgba(255, 255, 255, 0.85);
+  --glass-edge-low: rgba(255, 255, 255, 0.45);
+  --glass-blur: 20px;
+  --glass-blur-thick: 34px;
+
+  /* Sombras por altura. Una superficie grande flota mas alto. */
+  --shadow-low: 0 1px 2px rgba(16, 16, 24, 0.04), 0 2px 8px rgba(16, 16, 24, 0.04);
+  --shadow-mid: 0 2px 4px rgba(16, 16, 24, 0.05), 0 8px 24px rgba(16, 16, 24, 0.07);
+  --shadow-high: 0 4px 8px rgba(16, 16, 24, 0.06), 0 18px 48px rgba(16, 16, 24, 0.11);
+}
+
+
+:root[data-theme="dark"] {
+    --glass: rgba(38, 38, 48, 0.58);
+    --glass-thick: rgba(44, 44, 56, 0.72);
+    --glass-edge: rgba(255, 255, 255, 0.14);
+    --glass-edge-low: rgba(255, 255, 255, 0.06);
+
+    --shadow-low: 0 1px 2px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-mid: 0 2px 4px rgba(0, 0, 0, 0.45), 0 8px 24px rgba(0, 0, 0, 0.4);
+    --shadow-high: 0 4px 8px rgba(0, 0, 0, 0.5), 0 18px 48px rgba(0, 0, 0, 0.55);
+}
+
+/* Lamina de cristal. El borde superior claro es la luz que pega en el canto:
+   sin el, la superficie se lee plana y pegada al fondo. */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  border: 1px solid var(--glass-edge-low);
+  border-top-color: var(--glass-edge);
+  box-shadow: var(--shadow-mid);
+}
+
+/* Mas grande = mas gruesa. Se usa en las superficies que mandan. */
+.glass-thick {
+  background: var(--glass-thick);
+  backdrop-filter: blur(var(--glass-blur-thick)) saturate(190%);
+  -webkit-backdrop-filter: blur(var(--glass-blur-thick)) saturate(190%);
+  border: 1px solid var(--glass-edge-low);
+  border-top-color: var(--glass-edge);
+  box-shadow: var(--shadow-high);
+}
+
+/* NUNCA apilar un cristal sobre otro: la legibilidad se cae. Dentro de una
+   lamina, las filas se separan con un lavado solido muy leve. */
+.glass-inset {
+  background: color-mix(in srgb, var(--surface) 55%, transparent);
+}
+
+/* Brillo especular: una banda de luz que cruza el canto superior, como la
+   que deja una fuente puntual sobre vidrio real. */
+.specular {
+  position: relative;
+  isolation: isolate;
+}
+.specular::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: -1;
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, white 22%, transparent) 0%,
+    transparent 34%,
+    transparent 100%
+  );
+}
+:root[data-theme="dark"] .specular::before {
+    background: linear-gradient(
+      160deg,
+      color-mix(in srgb, white 9%, transparent) 0%,
+      transparent 30%,
+      transparent 100%
+    );
+}
+
+/* Borde de scroll: donde el contenido pasa por debajo del cristal flotante se
+   difumina, en vez de cortarse con una linea de 1px. */
+.scroll-edge {
+  mask-image: linear-gradient(to bottom, transparent 0, black 14px);
+}
+
+/* ---------- Respuesta al toque ----------
+   El realce va en el pointer-down, no al soltar: esperar al click se siente
+   muerto. 100ms es lo maximo antes de que se note el retraso. */
+.pressable {
+  transition:
+    transform 120ms ease-out,
+    box-shadow 160ms ease-out,
+    background-color 160ms ease-out;
+}
+.pressable:active {
+  transform: scale(0.975);
+}
+
+/* ---------- Tipografia ----------
+   El tracking depende del tamano: al crecer, las letras se leen demasiado
+   separadas, y al encoger, demasiado juntas. Un solo valor esta mal en
+   algun sitio. */
+.display {
+  letter-spacing: -0.026em;
+  line-height: 1.04;
+}
+.title {
+  letter-spacing: -0.018em;
+  line-height: 1.12;
+}
+.label-caps {
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+/* Vibrancy: sobre cristal el gris plano se deshace. El texto secundario sube
+   de contraste y de peso en vez de bajar de opacidad. */
+.on-glass-muted {
+  color: color-mix(in srgb, var(--text) 62%, transparent);
+  font-weight: 450;
+}
+
+/* El foco no depende de que cada componente recuerde inventar su propio aro.
+   Los controles que ya lo declaran pueden afinarlo sin perder este respaldo. */
+:where(a, button, input, textarea, select, summary):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   ACCESIBILIDAD
+   Los tres ajustes van por separado porque son necesidades distintas.
+   ============================================================ */
+
+/* Menos transparencia: el cristal se vuelve solido, no menos bonito. */
+@media (prefers-reduced-transparency: reduce) {
+  .glass,
+  .glass-thick {
+    background: var(--surface);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-color: var(--border);
+  }
+  .glass-inset {
+    background: var(--surface-muted);
+  }
+  .specular::before {
+    display: none;
+  }
+}
+
+/* Mas contraste: fondo casi solido y borde definido. */
+@media (prefers-contrast: more) {
+  .glass,
+  .glass-thick {
+    background: var(--surface);
+    border-color: var(--border-strong);
+  }
+  .on-glass-muted {
+    color: var(--text);
+  }
+}
+
+/* Menos movimiento no es "sin respuesta": es respuesta sin desplazamiento.
+   Se conservan opacidad y color, se quitan recorridos y rebotes. */
+@media (prefers-reduced-motion: reduce) {
+  .pressable {
+    transition: background-color 120ms ease-out;
+  }
+  .pressable:active {
+    transform: none;
+  }
+  .aurora canvas,
+  .aurora-static {
+    animation: none !important;
+  }
+}

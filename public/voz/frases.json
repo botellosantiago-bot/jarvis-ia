@@ -1,0 +1,98 @@
+{
+  "voz": "Jarvis (ElevenLabs Voice Design, español latino)",
+  "modelo": "eleven_multilingual_v2 / eleven_flash_v2_5",
+  "formato": "mp3 44.1 kHz 128 kbps",
+  "licencia": "Ver public/voz/LEEME.md",
+  "frases": [
+    {
+      "id": "a-sus-ordenes",
+      "archivo": "a-sus-ordenes.mp3",
+      "texto": "A sus órdenes."
+    },
+    {
+      "id": "si-senor",
+      "archivo": "si-senor.mp3",
+      "texto": "¿Sí, señor?"
+    },
+    {
+      "id": "digame-senor",
+      "archivo": "digame-senor.mp3",
+      "texto": "Dígame, señor."
+    },
+    {
+      "id": "ahora-que-senor",
+      "archivo": "ahora-que-senor.mp3",
+      "texto": "¿Ahora qué, señor?"
+    },
+    {
+      "id": "como-guste",
+      "archivo": "como-guste.mp3",
+      "texto": "Como guste, señor."
+    },
+    {
+      "id": "silencio-tactico",
+      "archivo": "silencio-tactico.mp3",
+      "texto": "Entendido. Silencio táctico."
+    },
+    {
+      "id": "listo-ya-quedo",
+      "archivo": "listo-ya-quedo.mp3",
+      "texto": "Listo, señor. Ya quedó."
+    },
+    {
+      "id": "usted-lo-hizo",
+      "archivo": "usted-lo-hizo.mp3",
+      "texto": "Listo, señor. Si alguien pregunta, usted lo hizo."
+    },
+    {
+      "id": "tarea-completa",
+      "archivo": "tarea-completa.mp3",
+      "texto": "Señor, la tarea está completa. Nadie salió herido. Esta vez."
+    },
+    {
+      "id": "hice-todo-yo",
+      "archivo": "hice-todo-yo.mp3",
+      "texto": "Señor, terminé. Otra vez hice todo yo, como siempre."
+    },
+    {
+      "id": "le-dejo-el-merito",
+      "archivo": "le-dejo-el-merito.mp3",
+      "texto": "Terminé, señor. Le dejo el mérito; yo me quedo con la satisfacción, que es lo único que puedo tener."
+    },
+    {
+      "id": "encargo-en-pantalla",
+      "archivo": "encargo-en-pantalla.mp3",
+      "texto": "Señor, terminé su encargo. Se lo dejé en pantalla."
+    },
+    {
+      "id": "necesito-autorizacion",
+      "archivo": "necesito-autorizacion.mp3",
+      "texto": "Señor, necesito su autorización para continuar."
+    },
+    {
+      "id": "apruebe-algo",
+      "archivo": "apruebe-algo.mp3",
+      "texto": "Señor, necesito que apruebe algo. Es por su bien, casi siempre."
+    },
+    {
+      "id": "respondere-con-brevedad",
+      "archivo": "respondere-con-brevedad.mp3",
+      "texto": "Entendido, señor. Responderé con brevedad, como quien tiene prisa por llegar a la siguiente tarea."
+    },
+    {
+      "id": "contesto-mas-rapido",
+      "archivo": "contesto-mas-rapido.mp3",
+      "texto": "Listo, señor. Ahora contesto más rápido. No se acostumbre."
+    },
+    {
+      "id": "vigilo-sus-creditos",
+      "archivo": "vigilo-sus-creditos.mp3",
+      "texto": "Señor, ahora vigilo sus créditos como si fueran míos."
+    },
+    {
+      "id": "aviso-de-su-mac",
+      "archivo": "aviso-de-su-mac.mp3",
+      "texto": "Señor, ahora puedo avisarle de lo que pasa en su Mac."
+    }
+  ]
+}

@@ -147,7 +147,7 @@ Cuando te convenzan, prográmalos con [`plantillas/rutinas/`](plantillas/rutinas
 
 ## Créditos y licencia
 
-Hecho por **Santiago Botello**. Es la versión abierta y limpia de la forma en que trabaja su Jarvis privado.
+Hecho por **Santiago Botello** ([@botellorex.ia](https://www.instagram.com/botellorex.ia/)). Es la versión abierta y limpia de la forma en que trabaja su Jarvis privado.
 
 - **Código, documentación y plantillas:** licencia MIT, ver [`LICENSE`](LICENSE).
 - **Audios de `public/voz/`:** tienen sus propias condiciones, ver [`public/voz/LEEME.md`](public/voz/LEEME.md).

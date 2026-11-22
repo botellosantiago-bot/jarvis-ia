@@ -1,0 +1,59 @@
+name: Algo no funciona
+description: Un error en la app, en un script o en la documentación.
+title: "[Error] "
+labels: ["error"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por avisar. **No pegues claves, tokens, correos ni datos reales**, ni en el texto ni en las capturas. Si es un hueco de seguridad, usa el reporte privado (ver SECURITY.md).
+  - type: dropdown
+    id: parte
+    attributes:
+      label: ¿Dónde pasa?
+      options:
+        - App web (hub, barra de captura, login)
+        - Bot de Telegram
+        - Google Calendar
+        - Cron y recordatorios
+        - Scripts de rutina o hook
+        - Documentación o plantillas
+        - Otra cosa
+    validations:
+      required: true
+  - type: textarea
+    id: que-paso
+    attributes:
+      label: Qué pasó
+      description: Lo que viste, con el mensaje de error textual si lo hay.
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Qué esperabas
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Cómo reproducirlo
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: input
+    id: entorno
+    attributes:
+      label: Entorno
+      placeholder: "local o Vercel, versión de Node, navegador"
+  - type: checkboxes
+    id: revisado
+    attributes:
+      label: Antes de enviar
+      options:
+        - label: Revisé la FAQ (docs/faq.md).
+          required: true
+        - label: Lo que pegué no trae claves ni datos personales.
+          required: true

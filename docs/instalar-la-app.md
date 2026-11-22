@@ -14,7 +14,9 @@ Y cada mañana te manda **un resumen del día**: tu horario, tus citas, lo que v
 
 Por dentro es Claude (de Anthropic) con *tool use*: no adivina que guardó algo, llama a una herramienta que de verdad lo guarda. Además trae **la voz de Jarvis**: 18 frases ya grabadas que puedes usar gratis, sin llaves.
 
-> 📸 **Captura pendiente:** `docs/capturas/hub.png`. El hub en escritorio con un día lleno (horario, citas y pendientes).
+![El hub en escritorio con datos inventados](capturas/hub.png)
+
+¿Recién instalado? Sigue [Tu primer día con Jarvis](tu-primer-dia-con-jarvis.md). ¿Algo falla? Revisa la [FAQ con las trampas de instalación](faq.md).
 
 ## Índice
 
@@ -47,7 +49,7 @@ Por dentro es Claude (de Anthropic) con *tool use*: no adivina que guardó algo,
 
 > 📸 **Captura pendiente:** `capturas/briefing.png`. El resumen de la mañana en Telegram con sus botones.
 
-> 📸 **Captura pendiente:** `capturas/movil.png`. El hub en el celular.
+<img src="capturas/movil.png" alt="El hub en el celular, con datos inventados" width="300">
 
 ---
 
@@ -363,3 +365,5 @@ Antes de subir cambios: `npm run lint`, `npm run typecheck` y `npm run build`.
 | Los botones de Telegram no hacen nada | Vuelve a registrar el webhook con `--set` (activa `callback_query`). |
 | No llega el resumen de la mañana | Que el cron corra a tu hora o después (ver la tabla del paso 6) y que `briefing_enabled` sea `true`. En Vercel → *Cron Jobs* lo puedes correr a mano. |
 | El hub pide "Reconectar" Google | Es el modo de prueba de Google (7 días). Reconecta o publica la app. |
+
+Más casos, con síntoma, causa y arreglo: [FAQ](faq.md).

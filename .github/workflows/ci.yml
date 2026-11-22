@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  app:
+    name: Lint, tipos, pruebas y build
+    runs-on: ubuntu-latest
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      # Sin secretos: el build no necesita claves. Si algún día las pide, falla aquí.
+      - run: npm run build
+
+  scripts:
+    name: Scripts de rutina
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 scripts/rutinas/esperan-ok.py "ejemplos/cerebro-demo/Esperan tu OK.md" --tope 3
+      - run: python3 scripts/rutinas/latido.py --config scripts/rutinas/latido.ejemplo.json --prueba
+      - name: Hook solo-orquesta
+        # Debe bloquear el fork (sale con 2) y dejar pasar a un subagente barato (sale con 0).
+        run: |
+          H=plantillas/claude/hooks/solo-orquesta.sh
+          set +e
+          echo '{"tool_input":{"subagent_type":"fork"}}' | bash "$H"; fork=$?
+          echo '{"tool_input":{"subagent_type":"mensajero"}}' | bash "$H"; msj=$?
+          set -e
+          echo "fork=$fork mensajero=$msj"
+          test "$fork" -eq 2 && test "$msj" -eq 0

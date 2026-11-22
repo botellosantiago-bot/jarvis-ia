@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Reportar un hueco de seguridad
+    url: https://github.com/botellosantiago-bot/jarvis-ia/security/advisories/new
+    about: En privado, nunca en un issue público. Ver SECURITY.md.
+  - name: Preguntas frecuentes y trampas de instalación
+    url: https://github.com/botellosantiago-bot/jarvis-ia/blob/main/docs/faq.md
+    about: Antes de abrir un issue, revisa si tu problema ya está ahí.

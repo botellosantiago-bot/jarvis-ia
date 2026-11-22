@@ -1,0 +1,28 @@
+name: Idea o mejora
+description: Algo que le falta a la app, a la documentación o a las plantillas.
+title: "[Idea] "
+labels: ["idea"]
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: Qué problema resuelve
+      description: Cuéntalo desde el uso, no desde la solución.
+    validations:
+      required: true
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: Qué propones
+    validations:
+      required: true
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Qué más consideraste
+  - type: checkboxes
+    id: aportar
+    attributes:
+      label: ¿Te animas?
+      options:
+        - label: Me gustaría hacer el pull request.

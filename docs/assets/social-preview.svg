@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="t d">
+<title id="t">JARVIS</title>
+<desc id="d">Banner de Jarvis: un holograma de anillos cian y dorado, el nombre JARVIS y el subtítulo Un agente personal que trabaja como equipo.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#030712"/>
+    <stop offset=".55" stop-color="#06112a"/>
+    <stop offset="1" stop-color="#030712"/>
+  </linearGradient>
+  <radialGradient id="halo">
+    <stop offset="0" stop-color="#5ee7ff" stop-opacity=".22"/>
+    <stop offset=".6" stop-color="#5ee7ff" stop-opacity=".05"/>
+    <stop offset="1" stop-color="#5ee7ff" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="core">
+    <stop offset="0" stop-color="#bff6ff" stop-opacity=".95"/>
+    <stop offset=".45" stop-color="#5ee7ff" stop-opacity=".55"/>
+    <stop offset="1" stop-color="#5ee7ff" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="txt" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f2fdff"/>
+    <stop offset="1" stop-color="#5ee7ff"/>
+  </linearGradient>
+  <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="1" fill="#16264a"/>
+  </pattern>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="4" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="1280" height="640" fill="url(#bg)"/>
+<rect width="1280" height="640" fill="url(#dots)"/>
+<circle cx="415" cy="97" r="0.8" fill="#5ee7ff" fill-opacity="0.60"/>
+<circle cx="120" cy="373" r="1" fill="#5ee7ff" fill-opacity="0.17"/>
+<circle cx="555" cy="45" r="1.6" fill="#e3c27a" fill-opacity="0.18"/>
+<circle cx="724" cy="606" r="2.2" fill="#5ee7ff" fill-opacity="0.67"/>
+<circle cx="739" cy="254" r="0.8" fill="#5ee7ff" fill-opacity="0.46"/>
+<circle cx="170" cy="268" r="2.2" fill="#5ee7ff" fill-opacity="0.32"/>
+<circle cx="1045" cy="116" r="1" fill="#5ee7ff" fill-opacity="0.35"/>
+<circle cx="701" cy="40" r="1" fill="#e3c27a" fill-opacity="0.42"/>
+<circle cx="681" cy="497" r="1.6" fill="#5ee7ff" fill-opacity="0.35"/>
+<circle cx="318" cy="115" r="0.8" fill="#5ee7ff" fill-opacity="0.47"/>
+<circle cx="672" cy="560" r="1.2" fill="#5ee7ff" fill-opacity="0.48"/>
+<circle cx="94" cy="328" r="1.2" fill="#e3c27a" fill-opacity="0.23"/>
+<circle cx="626" cy="25" r="2.2" fill="#5ee7ff" fill-opacity="0.47"/>
+<circle cx="1121" cy="201" r="2.2" fill="#5ee7ff" fill-opacity="0.42"/>
+<circle cx="1020" cy="44" r="1.2" fill="#e3c27a" fill-opacity="0.41"/>
+<circle cx="850" cy="39" r="2.2" fill="#5ee7ff" fill-opacity="0.70"/>
+<circle cx="1052" cy="182" r="1.2" fill="#5ee7ff" fill-opacity="0.16"/>
+<circle cx="591" cy="108" r="0.8" fill="#e3c27a" fill-opacity="0.27"/>
+<circle cx="368" cy="473" r="1.6" fill="#5ee7ff" fill-opacity="0.19"/>
+<circle cx="575" cy="352" r="1.6" fill="#5ee7ff" fill-opacity="0.63"/>
+<circle cx="356" cy="266" r="1.6" fill="#5ee7ff" fill-opacity="0.68"/>
+<circle cx="193" cy="113" r="1" fill="#e3c27a" fill-opacity="0.16"/>
+<circle cx="1064" cy="117" r="1" fill="#5ee7ff" fill-opacity="0.38"/>
+<circle cx="473" cy="362" r="2.2" fill="#5ee7ff" fill-opacity="0.67"/>
+<circle cx="838" cy="473" r="2.2" fill="#5ee7ff" fill-opacity="0.37"/>
+<circle cx="511" cy="66" r="0.8" fill="#5ee7ff" fill-opacity="0.25"/>
+<circle cx="1260" cy="282" r="2.2" fill="#e3c27a" fill-opacity="0.18"/>
+<circle cx="0" cy="97" r="1.2" fill="#e3c27a" fill-opacity="0.49"/>
+<circle cx="90" cy="133" r="1.2" fill="#5ee7ff" fill-opacity="0.68"/>
+<circle cx="771" cy="303" r="1.6" fill="#e3c27a" fill-opacity="0.70"/>
+<circle cx="596" cy="310" r="0.8" fill="#e3c27a" fill-opacity="0.56"/>
+<circle cx="948" cy="306" r="2.2" fill="#5ee7ff" fill-opacity="0.16"/>
+<circle cx="1217" cy="338" r="2.2" fill="#e3c27a" fill-opacity="0.65"/>
+<circle cx="970" cy="191" r="0.8" fill="#5ee7ff" fill-opacity="0.53"/>
+<circle cx="334" cy="235" r="1" fill="#e3c27a" fill-opacity="0.44"/>
+<circle cx="997" cy="211" r="1" fill="#e3c27a" fill-opacity="0.59"/>
+<circle cx="1047" cy="474" r="2.2" fill="#e3c27a" fill-opacity="0.42"/>
+<circle cx="936" cy="633" r="1.6" fill="#5ee7ff" fill-opacity="0.29"/>
+<circle cx="886" cy="612" r="1.2" fill="#5ee7ff" fill-opacity="0.68"/>
+<circle cx="467" cy="141" r="1" fill="#e3c27a" fill-opacity="0.34"/>
+<circle cx="618" cy="631" r="0.8" fill="#5ee7ff" fill-opacity="0.41"/>
+<circle cx="836" cy="512" r="0.8" fill="#e3c27a" fill-opacity="0.65"/>
+<circle cx="1001" cy="480" r="1" fill="#5ee7ff" fill-opacity="0.39"/>
+<circle cx="814" cy="56" r="1.6" fill="#5ee7ff" fill-opacity="0.40"/>
+<circle cx="951" cy="54" r="1" fill="#e3c27a" fill-opacity="0.17"/>
+<circle cx="756" cy="298" r="2.2" fill="#5ee7ff" fill-opacity="0.60"/>
+<circle cx="1255" cy="421" r="2.2" fill="#5ee7ff" fill-opacity="0.45"/>
+<circle cx="27" cy="512" r="0.8" fill="#5ee7ff" fill-opacity="0.44"/>
+<circle cx="1195" cy="278" r="1" fill="#5ee7ff" fill-opacity="0.17"/>
+<circle cx="272" cy="321" r="1.2" fill="#5ee7ff" fill-opacity="0.29"/>
+<circle cx="536" cy="84" r="1.2" fill="#5ee7ff" fill-opacity="0.64"/>
+<circle cx="848" cy="522" r="2.2" fill="#5ee7ff" fill-opacity="0.22"/>
+<circle cx="194" cy="327" r="1" fill="#5ee7ff" fill-opacity="0.48"/>
+<circle cx="993" cy="96" r="2.2" fill="#e3c27a" fill-opacity="0.55"/>
+<circle cx="712" cy="209" r="2.2" fill="#5ee7ff" fill-opacity="0.42"/>
+<circle cx="994" cy="565" r="1" fill="#e3c27a" fill-opacity="0.30"/>
+<circle cx="988" cy="325" r="0.8" fill="#5ee7ff" fill-opacity="0.39"/>
+<circle cx="784" cy="324" r="1.2" fill="#5ee7ff" fill-opacity="0.40"/>
+<circle cx="683" cy="306" r="2.2" fill="#5ee7ff" fill-opacity="0.63"/>
+<circle cx="1206" cy="166" r="1" fill="#5ee7ff" fill-opacity="0.61"/>
+<circle cx="176" cy="78" r="0.8" fill="#5ee7ff" fill-opacity="0.52"/>
+<circle cx="548" cy="136" r="0.8" fill="#5ee7ff" fill-opacity="0.64"/>
+<circle cx="198" cy="458" r="1" fill="#5ee7ff" fill-opacity="0.29"/>
+<circle cx="176" cy="299" r="0.8" fill="#5ee7ff" fill-opacity="0.37"/>
+<circle cx="624" cy="634" r="1" fill="#5ee7ff" fill-opacity="0.54"/>
+<circle cx="1272" cy="258" r="1.2" fill="#5ee7ff" fill-opacity="0.33"/>
+<circle cx="924" cy="12" r="1.6" fill="#5ee7ff" fill-opacity="0.54"/>
+<circle cx="492" cy="331" r="0.8" fill="#5ee7ff" fill-opacity="0.21"/>
+<circle cx="1176" cy="146" r="0.8" fill="#5ee7ff" fill-opacity="0.30"/>
+<circle cx="51" cy="499" r="1" fill="#5ee7ff" fill-opacity="0.60"/>
+<circle cx="1087" cy="433" r="1.6" fill="#5ee7ff" fill-opacity="0.23"/>
+<circle cx="1177" cy="365" r="0.8" fill="#5ee7ff" fill-opacity="0.30"/>
+<circle cx="1023" cy="117" r="1.2" fill="#5ee7ff" fill-opacity="0.67"/>
+<circle cx="812" cy="513" r="1" fill="#e3c27a" fill-opacity="0.19"/>
+<circle cx="1104" cy="290" r="2.2" fill="#5ee7ff" fill-opacity="0.38"/>
+<circle cx="1172" cy="398" r="1" fill="#e3c27a" fill-opacity="0.67"/>
+<circle cx="1241" cy="168" r="1.2" fill="#e3c27a" fill-opacity="0.50"/>
+<circle cx="680" cy="132" r="1" fill="#5ee7ff" fill-opacity="0.30"/>
+<circle cx="1029" cy="636" r="0.8" fill="#e3c27a" fill-opacity="0.55"/>
+<circle cx="705" cy="121" r="1.6" fill="#5ee7ff" fill-opacity="0.21"/>
+<circle cx="1048" cy="277" r="1.6" fill="#5ee7ff" fill-opacity="0.68"/>
+<circle cx="394" cy="138" r="1" fill="#e3c27a" fill-opacity="0.61"/>
+<circle cx="905" cy="407" r="1.2" fill="#5ee7ff" fill-opacity="0.69"/>
+<circle cx="1071" cy="9" r="1.2" fill="#5ee7ff" fill-opacity="0.39"/>
+<circle cx="71" cy="426" r="2.2" fill="#5ee7ff" fill-opacity="0.52"/>
+<circle cx="361" cy="155" r="1.6" fill="#5ee7ff" fill-opacity="0.25"/>
+<circle cx="344" cy="2" r="1.2" fill="#5ee7ff" fill-opacity="0.68"/>
+<circle cx="700" cy="156" r="1.2" fill="#5ee7ff" fill-opacity="0.27"/>
+<circle cx="234" cy="215" r="1.2" fill="#e3c27a" fill-opacity="0.43"/>
+<circle cx="257" cy="323" r="1.2" fill="#e3c27a" fill-opacity="0.60"/>
+<circle cx="184" cy="376" r="1.2" fill="#5ee7ff" fill-opacity="0.32"/>
+<circle cx="300" cy="320" r="273.0" fill="url(#halo)"/>
+<g fill="none" stroke="#5ee7ff">
+  <circle cx="300" cy="320" r="205.4" stroke-opacity=".22" stroke-width="1" stroke-dasharray="2 7"/>
+  <circle cx="300" cy="320" r="174.2" stroke-opacity=".7" stroke-width="1.6" stroke-dasharray="70 12 10 12 4 12" transform="rotate(-18 300 320)"/>
+  <circle cx="300" cy="320" r="127.4" stroke-opacity=".35" stroke-width="1"/>
+  <circle cx="300" cy="320" r="106.6" stroke-opacity=".55" stroke-width="7" stroke-dasharray="1.2 4.2"/>
+  <circle cx="300" cy="320" r="75.4" stroke-opacity=".9" stroke-width="2" filter="url(#glow)"/>
+</g>
+<circle cx="300" cy="320" r="150.8" fill="none" stroke="#e3c27a" stroke-width="3" stroke-linecap="round" stroke-opacity=".85" stroke-dasharray="208.5 947.5" transform="rotate(200 300 320)"/>
+<circle cx="300" cy="320" r="150.8" fill="none" stroke="#e3c27a" stroke-width="3" stroke-linecap="round" stroke-opacity=".5" stroke-dasharray="75.8 947.5" transform="rotate(20 300 320)"/>
+<line x1="340.3" y1="250.2" x2="387.1" y2="169.1" stroke="#5ee7ff" stroke-opacity=".35" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="387.1" cy="169.1" r="11.7" fill="#071428" stroke="#e3c27a" stroke-width="1.6"/>
+<circle cx="387.1" cy="169.1" r="3.9" fill="#e3c27a"/>
+<line x1="369.8" y1="360.3" x2="450.9" y2="407.1" stroke="#5ee7ff" stroke-opacity=".35" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="450.9" cy="407.1" r="11.7" fill="#071428" stroke="#e3c27a" stroke-width="1.6"/>
+<circle cx="450.9" cy="407.1" r="3.9" fill="#e3c27a"/>
+<line x1="259.7" y1="389.8" x2="212.9" y2="470.9" stroke="#5ee7ff" stroke-opacity=".35" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="212.9" cy="470.9" r="11.7" fill="#071428" stroke="#e3c27a" stroke-width="1.6"/>
+<circle cx="212.9" cy="470.9" r="3.9" fill="#e3c27a"/>
+<line x1="230.2" y1="279.7" x2="149.1" y2="232.9" stroke="#5ee7ff" stroke-opacity=".35" stroke-width="1" stroke-dasharray="3 4"/>
+<circle cx="149.1" cy="232.9" r="11.7" fill="#071428" stroke="#e3c27a" stroke-width="1.6"/>
+<circle cx="149.1" cy="232.9" r="3.9" fill="#e3c27a"/>
+<circle cx="300" cy="320" r="52.0" fill="url(#core)"/>
+<circle cx="300" cy="320" r="18.2" fill="#e9fdff" filter="url(#glow)"/>
+<line x1="515.8" y1="320.0" x2="536.6" y2="320.0" stroke="#5ee7ff" stroke-opacity=".6" stroke-width="1.5"/>
+<line x1="300.0" y1="535.8" x2="300.0" y2="556.6" stroke="#5ee7ff" stroke-opacity=".6" stroke-width="1.5"/>
+<line x1="84.2" y1="320.0" x2="63.4" y2="320.0" stroke="#5ee7ff" stroke-opacity=".6" stroke-width="1.5"/>
+<line x1="300.0" y1="104.2" x2="300.0" y2="83.4" stroke="#5ee7ff" stroke-opacity=".6" stroke-width="1.5"/>
+<path d="M18 52V18H52" stroke="#5ee7ff" stroke-opacity=".45" stroke-width="1.5" fill="none"/>
+<path d="M1228 18H1262V52" stroke="#5ee7ff" stroke-opacity=".45" stroke-width="1.5" fill="none"/>
+<path d="M18 588V622H52" stroke="#5ee7ff" stroke-opacity=".45" stroke-width="1.5" fill="none"/>
+<path d="M1228 622H1262V588" stroke="#5ee7ff" stroke-opacity=".45" stroke-width="1.5" fill="none"/>
+<g transform="translate(560 190)">
+  <text x="0" y="0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="17" letter-spacing="4" fill="#5ee7ff" fill-opacity=".75">// AGENTE PERSONAL · v1.0.0</text>
+  <text x="-6" y="132" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="137" font-weight="700" letter-spacing="18" fill="url(#txt)" filter="url(#glow)">JARVIS</text>
+  <line x1="0" y1="164" x2="627" y2="164" stroke="#5ee7ff" stroke-opacity=".35"/>
+  <circle cx="627" cy="164" r="3" fill="#e3c27a"/>
+  <text x="0" y="211" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" fill="#d4e2f5">Un agente personal que trabaja como equipo.</text>
+  <text x="0" y="253" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" letter-spacing="2" fill="#e3c27a">orquestador · subagentes · cerebro · rutinas</text>
+  <text x="0" y="336" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="17" letter-spacing="1" fill="#8ea3c4">forma de trabajar · plantillas · app web + bot · MIT</text>
+</g>
+</svg>

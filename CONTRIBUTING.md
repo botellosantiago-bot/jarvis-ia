@@ -17,4 +17,11 @@
 5. **Nada de llaves ni datos personales** en el código, los commits ni las capturas. Si ves una llave en un PR, avisa y no la copies.
 6. **Escribe en español**, con mensajes de commit cortos que digan qué cambia y por qué.
 
-¿Encontraste un hueco de seguridad? No abras un issue público: escríbele por mensaje directo a [@botellorex.ia](https://instagram.com/botellorex.ia).
+¿Encontraste un hueco de seguridad? No abras un issue público: usa el reporte privado de GitHub (pestaña **Security → Report a vulnerability**).
+
+## Documentación y plantillas
+
+- Los ejemplos van con personas y proyectos **inventados y evidentes** ("Ana, clienta ficticia", "Proyecto Demo"). Nada de datos reales tuyos ni de nadie.
+- Las plantillas van vacías: estructura y una línea de guía por campo.
+- Si agregas un script, que sea chico, sin dependencias raras y con un modo `--prueba` que no toque nada.
+- Diagramas en Mermaid.

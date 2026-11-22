@@ -12,7 +12,7 @@ No trae mis claves ni mis datos. Trae los flujos.
 
 ```mermaid
 flowchart LR
-    M[9:00 · Ronda<br/>estado + Esperan tu OK] --> S[Sesión<br/>retoma del traspaso]
+    M[Ronda de la mañana<br/>estado + Esperan tu OK] --> S[Sesión<br/>retoma del traspaso]
     S --> D[Delega<br/>código, renders, lecturas]
     D --> V[Verifica viendo<br/>antes / después]
     V --> A[Auditor<br/>antes de publicar]
@@ -23,7 +23,7 @@ flowchart LR
     M -.-> Tel
 ```
 
-- **9:00.** La ronda revisa los sistemas. Si todo está bien, una frase. Si no, qué falló. Y te recuerda las decisiones más viejas que esperan tu OK.
+- **Al empezar el día** (a la hora que elijas), la ronda revisa los sistemas. Si todo está bien, una frase. Si no, qué falló. Y te recuerda las decisiones más viejas que esperan tu OK.
 - **Empiezas a trabajar.** Le pides algo grande. El agente lee el último traspaso, sabe dónde se quedó y te dice en cuántos pasos va.
 - **El trabajo se reparte.** El código largo lo hace el `programador`, el render el `obrero`, las búsquedas el `mensajero`. El orquestador revisa lo que vuelve y te avisa en qué paso va.
 - **"Listo" quiere decir que lo vio.** Captura en el navegador, la app en el simulador, fotogramas del video. Y una lista de lo que **no** comprobó.

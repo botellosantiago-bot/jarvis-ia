@@ -6,7 +6,7 @@ Un agente que sólo trabaja cuando le escribes es un chat. Uno que revisa solo, 
 flowchart LR
     subgraph casa [Compu siempre encendida]
         L[Latido<br/>cada 5 min] --> E{¿Falla 2<br/>vueltas seguidas?}
-        R[Ronda<br/>3 veces al día] --> OK[Lee Esperan tu OK]
+        R[Ronda<br/>a las horas que elijas] --> OK[Lee Esperan tu OK]
         R --> C[Revisa sistemas<br/>y agenda]
     end
     E -->|sí, una vez| AV[Aviso]
@@ -19,11 +19,11 @@ flowchart LR
 
 ## La ronda
 
-Corre a horas fijas (por ejemplo 9, 14 y 19 h) y te da un estado ejecutivo:
+Corre a horas fijas que tú eliges (por ejemplo, tres veces al día: al empezar, a media jornada y al cerrar) y te da un estado ejecutivo:
 
 - **Todo bien:** una sola frase. No gasta modelo: sale de un banco de frases ya escritas.
 - **Algo falla:** la frase y el detalle de qué falló.
-- **La de la mañana** suma las decisiones de "Esperan tu OK" sin marcar, las más viejas primero, con un tope (5) para no abrumar.
+- **La primera del día** suma las decisiones de "Esperan tu OK" sin marcar, las más viejas primero, con un tope (5) para no abrumar.
 - **Citas:** te avisa una hora antes de cada evento del calendario.
 
 El script [`scripts/rutinas/esperan-ok.py`](../scripts/rutinas/esperan-ok.py) es la pieza que lee la lista. Pruébalo con el ejemplo:
@@ -46,6 +46,8 @@ Script genérico: [`scripts/rutinas/latido.py`](../scripts/rutinas/latido.py). L
 python3 scripts/rutinas/latido.py --config scripts/rutinas/latido.ejemplo.json --prueba
 ```
 
+El JSON de configuración equivale a código que se ejecuta cada pocos minutos: cada `comando` corre con tus permisos. Debe ser sólo tuyo, con permisos 600 (`chmod 600 ~/.agente/latido.json`), y el estado se guarda aparte (`~/.agente/latido-estado.json`) para que el script nunca pise la configuración.
+
 Para programarlo, la plantilla de `launchd` está en [`plantillas/rutinas/com.ejemplo.latido.plist`](../plantillas/rutinas/com.ejemplo.latido.plist).
 
 ## Avisos con prioridades
@@ -60,7 +62,7 @@ No todo merece sonar. Tres niveles:
 
 Reglas que evitan que los avisos se vuelvan ruido:
 
-- **Horas de silencio** (por ejemplo de 23 a 8). Lo normal y lo bajo esperan.
+- **Horas de silencio** configurables (por ejemplo, de noche). Lo normal y lo bajo esperan.
 - **Sólo si estás presente** para lo bajo: hablarle a un cuarto vacío no sirve.
 - **Evento y conteo, no detalle**, cuando el aviso sale de tu compu ([ver seguridad](05-seguridad.md#al-teléfono-y-a-la-nube-evento-y-conteo-nunca-detalle)).
 - **Si el canal de avisos falla, la rutina sigue.** El aviso es un extra, no una dependencia.

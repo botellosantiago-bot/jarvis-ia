@@ -10,7 +10,7 @@ El latido: revisa que lo básico siga vivo y avisa sólo cuando hace falta.
 Configuración (JSON):
 
     {
-      "estado": "~/.agente/latido.json",
+      "estado": "~/.agente/latido-estado.json",
       "disco_min_gb": 15,
       "avisar": ["~/.agente/bin/avisar"],
       "chequeos": [
@@ -20,6 +20,9 @@ Configuración (JSON):
 
 "avisar" es el comando que recibe el texto del aviso como último argumento (tu bot, tu app,
 una notificación del sistema). Sin "avisar", el aviso sólo se imprime.
+
+Ojo: este JSON equivale a código que se ejecuta cada pocos minutos. Debe ser sólo tuyo,
+con permisos 600 (chmod 600 latido.json), y no debe ser la misma ruta que "estado".
 
 Uso:
     python3 latido.py --config latido.json            la vuelta normal (la corre launchd o cron)
@@ -80,7 +83,7 @@ def main():
             print(f"{'ok   ' if vivo else 'FALLA'}  {nombre}")
         return 0
 
-    ruta = os.path.expanduser(cfg.get("estado", "~/.agente/latido.json"))
+    ruta = os.path.expanduser(cfg.get("estado", "~/.agente/latido-estado.json"))
     try:
         with open(ruta, encoding="utf-8") as f:
             estado = json.load(f)

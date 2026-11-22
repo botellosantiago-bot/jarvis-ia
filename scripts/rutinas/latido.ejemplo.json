@@ -1,5 +1,5 @@
 {
-  "estado": "~/.agente/latido.json",
+  "estado": "~/.agente/latido-estado.json",
   "disco_min_gb": 15,
   "chequeos": [
     { "nombre": "git", "comando": ["git", "--version"] },

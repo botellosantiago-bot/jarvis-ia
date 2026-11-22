@@ -13,6 +13,8 @@
 #   MODELO_ORQUESTADOR  nombre (o parte) del modelo caro de la sesión. Por defecto: fable
 #   MODELOS_BARATOS     modelos permitidos para agentes genéricos, separados por |. Por defecto: opus|sonnet|haiku
 
+command -v jq >/dev/null || { echo "Falta jq: instálalo para que el hook pueda revisar el encargo." >&2; exit 2; }
+
 orquestador=$(printf '%s' "${MODELO_ORQUESTADOR:-fable}" | tr '[:upper:]' '[:lower:]')
 baratos="${MODELOS_BARATOS:-opus|sonnet|haiku}"
 

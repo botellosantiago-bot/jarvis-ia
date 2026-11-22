@@ -1,0 +1,8 @@
+{
+  "estado": "~/.agente/latido.json",
+  "disco_min_gb": 15,
+  "chequeos": [
+    { "nombre": "git", "comando": ["git", "--version"] },
+    { "nombre": "la app en local", "comando": ["curl", "-sf", "-o", "/dev/null", "http://127.0.0.1:3000"], "timeout": 5 }
+  ]
+}

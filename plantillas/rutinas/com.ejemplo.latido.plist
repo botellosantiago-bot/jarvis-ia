@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Corre el latido cada 5 minutos en macOS.
+  1. Cambia TU_USUARIO y las rutas por las tuyas (launchd no expande ~).
+  2. Copia a ~/Library/LaunchAgents/com.ejemplo.latido.plist
+  3. launchctl load ~/Library/LaunchAgents/com.ejemplo.latido.plist
+  En Linux usa cron:  */5 * * * * python3 /ruta/latido.py --config /ruta/latido.json
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.ejemplo.latido</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/TU_USUARIO/.agente/latido.py</string>
+    <string>--config</string>
+    <string>/Users/TU_USUARIO/.agente/latido.json</string>
+  </array>
+  <key>StartInterval</key>
+  <integer>300</integer>
+  <key>StandardOutPath</key>
+  <string>/Users/TU_USUARIO/.agente/latido.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/TU_USUARIO/.agente/latido.log</string>
+</dict>
+</plist>

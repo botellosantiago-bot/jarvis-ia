@@ -1,0 +1,7 @@
+# Alcance autorizado del auditor. Una entrada por línea; lo que no esté aquí no se prueba.
+# localhost siempre está permitido. Nunca pongas producción con datos reales.
+#
+# repo:.
+# url:https://staging.tu-dominio.example
+# supabase-staging:<referencia del proyecto de prueba>
+repo:.
